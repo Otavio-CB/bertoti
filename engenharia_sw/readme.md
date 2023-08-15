@@ -1,32 +1,44 @@
-## Texto
-We see three critical differences between programming and software engineering: time, scale, and the trade-offs at play. On a software engineering project, engineers need to be more concerned with the passage of time and the eventual need for change. In a software engineering organization, we need to be more concerned about scale and efficiency, both for the software we produce as well as for the organization that is producing it. Finally, as software engineers, we are asked to make more complex decisions with higher-stakes outcomes, often based on imprecise estimates of time and growth.
+## Programação vs. Engenharia de Software
 
-## Comentário
-O engenheiro de software precisa se preocupar mais com a preparação do projeto e as eventuais mudanças ao longo do tempo, diferente do programador que precisa apenas construir o código em si e não pensar na ideia. <br>
-A maior parte do tempo do engenheiro de software é gasto pensando em como o software irá funcionar e sua eficiência, junto de sua escala, ou seja, um tamanho, uma dimensão da quantidade de elementos de um determiando software, para que ao entregar o projeto esteja da forma mais eficiente possível, o programador é apenas o responsável por construir e código. <br>
-O engenheiro de software tem a responsabilidade de tomar decisões complexas e de alto risco devido ao planejamento prévio de um software, já que em alguns casos os dados são imprecisos devido a sua originalidade, já o programador só executa essas ideias. <br>
+No desenvolvimento de software, surge uma distinção entre programação e engenharia de software, baseada em tempo, escala e compensações. Programadores concentram-se na codificação, enquanto engenheiros de software abraçam um escopo mais amplo que envolve a evolução e adaptação do projeto ao longo do tempo.
 
-## Texto
-Within Google, we sometimes say, “Software engineering is programming integrated over time.” Programming is certainly a significant part of software engineering: after all, programming is how you generate new software in the first place. If you accept this distinction, it also becomes clear that we might need to delineate between programming tasks (development) and software engineering tasks (development, modification, maintenance). The addition of time adds an important new dimension to programming. Cubes aren’t squares, distance isn’t velocity. Software engineering isn’t programming.
+**Pontos-Chave:**
+- **Programação vs. Engenharia:** Programadores criam código, enquanto engenheiros de software projetam para longevidade e adaptabilidade.
+- **Tempo e Mudança:** Engenheiros antecipam mudanças, considerando a passagem do tempo e requisitos em evolução.
+- **Escala e Eficiência:** Engenharia de software enfatiza eficiência e escala, atendendo tanto aos produtos de software quanto à organização produtora.
+- **Decisões Complexas:** Engenheiros de software tomam decisões críticas baseadas em previsões imprecisas, devido à natureza única de cada projeto.
 
-## Comentário
-O texto aborda a relação entre a engenharia de software e a programação, enfatizando que embora a programação seja uma parte fundamental da engenharia de software, elas não são a mesma coisa. A frase "A engenharia de software é a programação integrada ao longo do tempo" sugere que a programação é um componente essencial da engenharia de software, mas que a engenharia de software envolve mais do que apenas escrever código. <br>
+## Perspectiva da Google
 
-## 3 Exemplos de Trade-Off
-Complexidade x Simplicidade <br>
-Custo x Tempo <br>
-Recursos x Baixa velocidade <br>
+Dentro da Google, frequentemente vemos a engenharia de software como programação integrada ao longo do tempo. A programação é um aspecto fundamental, gerando novo software. Distinguir tarefas de programação de tarefas mais amplas de engenharia de software, que abrangem desenvolvimento, modificação e manutenção, torna-se crucial. A dimensão do tempo introduz complexidade, de forma análoga a como cubos diferem de quadrados e distância de velocidade.
 
-## WhastApp x Messenger
+**Principais Observações:**
+- **Integração do Tempo:** Engenharia de software vai além da programação, considerando o aspecto temporal do desenvolvimento.
+- **Delimitação de Tarefas:** Diferenciar entre programação e tarefas mais abrangentes de engenharia de software.
+- **Tempo como Dimensão:** O tempo adiciona profundidade e complexidade à engenharia de software além da mera codificação.
 
-### *Popularidade Global do WhatsApp:*
-O WhatsApp conquistou uma popularidade global impressionante, especialmente em países fora dos Estados Unidos. Ele é amplamente utilizado em muitas partes do mundo como o principal aplicativo de mensagens, tanto para comunicação pessoal quanto comercial. Essa adoção em escala global contribui para o alto volume de mensagens trocadas diariamente no WhatsApp.
+## Exemplos de Compensações
 
-### *Demografia e Público-alvo:*
-O Messenger, por sua vez, começou como um aplicativo associado ao Facebook e muitos usuários do Messenger também usam o Facebook para se comunicar. Isso pode criar alguma sobreposição de funcionalidade e público. Além disso, o público do Messenger pode ser mais concentrado em certas regiões ou faixas etárias específicas, enquanto o WhatsApp possui uma base de usuários mais diversificada e ampla.
+O desenvolvimento de software envolve fazer compensações para encontrar equilíbrio. Considere três exemplos:
 
-### *Uso de Dados e Privacidade:*
-Outro fator que influencia as diferenças de uso é a abordagem de privacidade adotada pelo WhatsApp. Historicamente, o WhatsApp focou em recursos de criptografia de ponta a ponta, o que significa que as mensagens são fortemente protegidas e não podem ser lidas por terceiros, nem mesmo pela própria empresa. Isso atraiu usuários preocupados com a segurança e a privacidade de suas comunicações, impulsionando ainda mais sua adoção.
+- **Complexidade vs. Simplicidade:** A decisão entre soluções intrincadas e simplicidade direta impacta a usabilidade e a velocidade de desenvolvimento.
+- **Custo vs. Tempo:** Equilibrar restrições orçamentárias com prazos do projeto requer priorização de recursos.
+- **Recursos vs. Baixa Velocidade:** Alocar muitos recursos pode resultar em execução lenta, enquanto recursos limitados podem melhorar a velocidade.
 
-### *Cultura e Histórico:*
-Cultura e histórico também desempenham um papel. O WhatsApp, lançado em 2009, começou como um aplicativo de mensagens simples e eficaz, atraindo usuários que queriam se comunicar de maneira direta. O Messenger, que teve várias iterações ao longo dos anos e esteve mais vinculado à plataforma do Facebook, pode ter uma percepção diferente em termos de como as pessoas se comunicam através dele.
+## WhatsApp vs. Messenger
+
+### WhatsApp:
+
+- **Popularidade Global:** O WhatsApp desfruta de imensa popularidade global, especialmente fora dos EUA, servindo como ferramenta-chave de comunicação pessoal e comercial.
+- **Diversidade de Usuários:** A adoção abrangente do aplicativo resulta em uma base de usuários diversificada, realizando trocas substanciais de mensagens diariamente.
+- **Ênfase na Privacidade:** A sólida criptografia de ponta a ponta do WhatsApp atrai usuários preocupados com privacidade, aprimorando a segurança da comunicação.
+
+### Messenger:
+
+- **Associação ao Facebook:** Inicialmente vinculado ao Facebook, a base de usuários do Messenger pode se sobrepor, especialmente entre aqueles que usam ambas as plataformas.
+- **Variação Demográfica:** A base de usuários do Messenger pode ser mais concentrada por região ou faixa etária em comparação com a audiência diversificada do WhatsApp.
+- **Abordagem de Privacidade:** O Messenger pode não enfatizar a criptografia da mesma maneira, influenciando as preferências de privacidade dos usuários.
+
+**Fatores Culturais e Históricos:**
+- **Origens do WhatsApp:** Lançado como um aplicativo simples de mensagens em 2009, o WhatsApp atraiu usuários que valorizavam a comunicação direta.
+- **Evolução do Messenger:** Através de várias iterações e com forte associação ao Facebook, a percepção das pessoas sobre os métodos de comunicação no Messenger pode ser diferente.
