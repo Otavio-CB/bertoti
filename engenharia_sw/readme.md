@@ -1,4 +1,4 @@
-## Programação vs. Engenharia de Software
+## Programação vs. Engenharia de Software - Atividade 1
 
 We see three critical differences between programming and software engineering: time, scale, and the trade-offs at play. On a software engineering project, engineers need to be more concerned with the passage of time and the eventual need for change. In a software engineering organization, we need to be more concerned about scale and efficiency, both for the software we produce as well as for the organization that is producing it. Finally, as software engineers, we are asked to make more complex decisions with higher-stakes outcomes, often based on imprecise estimates of time and growth.
 
@@ -17,7 +17,7 @@ Dentro da Google, frequentemente vemos a engenharia de software como programaç�
 - **Delimitação de Tarefas:** Diferenciar entre programação e tarefas mais abrangentes de engenharia de software.
 - **Tempo como Dimensão:** O tempo adiciona profundidade e complexidade à engenharia de software além da mera codificação.
 
-## Exemplos de Compensações
+## Exemplos de Compensações - Atividade 2
 
 O desenvolvimento de software envolve fazer compensações para encontrar equilíbrio. Considere três exemplos:
 
@@ -25,25 +25,7 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 - **Custo vs. Tempo:** Equilibrar restrições orçamentárias com prazos do projeto requer priorização de recursos.
 - **Recursos vs. Baixa Velocidade:** Alocar muitos recursos pode resultar em execução lenta, enquanto recursos limitados podem melhorar a velocidade.
 
-## WhatsApp vs. Messenger
-
-### WhatsApp:
-
-- **Popularidade Global:** O WhatsApp desfruta de imensa popularidade global, especialmente fora dos EUA, servindo como ferramenta-chave de comunicação pessoal e comercial.
-- **Diversidade de Usuários:** A adoção abrangente do aplicativo resulta em uma base de usuários diversificada, realizando trocas substanciais de mensagens diariamente.
-- **Ênfase na Privacidade:** A sólida criptografia de ponta a ponta do WhatsApp atrai usuários preocupados com privacidade, aprimorando a segurança da comunicação.
-
-### Messenger:
-
-- **Associação ao Facebook:** Inicialmente vinculado ao Facebook, a base de usuários do Messenger pode se sobrepor, especialmente entre aqueles que usam ambas as plataformas.
-- **Variação Demográfica:** A base de usuários do Messenger pode ser mais concentrada por região ou faixa etária em comparação com a audiência diversificada do WhatsApp.
-- **Abordagem de Privacidade:** O Messenger pode não enfatizar a criptografia da mesma maneira, influenciando as preferências de privacidade dos usuários.
-
-**Fatores Culturais e Históricos:**
-- **Origens do WhatsApp:** Lançado como um aplicativo simples de mensagens em 2009, o WhatsApp atraiu usuários que valorizavam a comunicação direta.
-- **Evolução do Messenger:** Através de várias iterações e com forte associação ao Facebook, a percepção das pessoas sobre os métodos de comunicação no Messenger pode ser diferente.
-
-## Heurísticas
+## Heurísticas - Atividade 3
 
 - https://www.nngroup.com/articles/ten-usability-heuristics/
 
