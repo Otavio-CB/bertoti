@@ -68,3 +68,6 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 
 **Ajuda e documentação** 
 - **Acerto:** Ajuda para reconhecer o erro para melhor saná-lo / **Erro:** Não disponibilizar nenhuma forma de consulta.
+
+## Construir Diagrama de Caso de Uso - Atividade 4
+
