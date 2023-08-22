@@ -71,3 +71,4 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 
 ## Construir Diagrama de Caso de Uso - Atividade 4
 
+<img src="img/caso_de_uso.png" alt="caso de uso">
