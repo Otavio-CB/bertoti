@@ -11,7 +11,6 @@ public class Client {
         this.email = email;
     }
 
-    // Getters (métodos de acesso)
     public String getName() {
         return name;
     }

@@ -24,7 +24,6 @@ public class CarRental {
     }
 
     public void releaseCar(Employee employee) {
-        // Implemente a lógica de liberação do carro aqui
         if (employee != null && car != null) {
             System.out.println("Carro " + car.getModel() + " liberado por " + employee.getName());
         } else {
@@ -33,7 +32,6 @@ public class CarRental {
     }
 
     public void login(Employee employee) {
-        // Implemente a lógica de login do funcionário aqui
         if (employee != null) {
             System.out.println("Funcionário " + employee.getName() + " logado com sucesso.");
         } else {

@@ -9,7 +9,6 @@ public class Car {
         this.licensePlate = licensePlate;
     }
 
-    // Getters (métodos de acesso)
     public String getModel() {
         return model;
     }
