@@ -76,3 +76,11 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 ## Construir Diagrama UML - Atividade 5
 
 <img src="engenharia_sw/img/uml.drawio.png" alt="caso de uso">
+
+## Código Java (Espelhando classe UML) - Atividade 6
+
+`bertoti/engenharia_sw/CarRentals`
+
+## Código JUnit (Testes Automatizados) - Atividade 7
+
+`bertoti/engenharia_sw/junit`
