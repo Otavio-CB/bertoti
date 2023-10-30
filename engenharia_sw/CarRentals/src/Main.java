@@ -14,7 +14,7 @@ public class Main {
         while (true) {
             showMainMenu();
             int option = scanner.nextInt();
-            scanner.nextLine(); // Consumes the newline character
+            scanner.nextLine();
 
             switch (option) {
                 case 1:

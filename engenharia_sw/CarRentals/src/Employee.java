@@ -12,11 +12,10 @@ public class Employee {
     }
 
     public boolean login(String username, String password) {
-        // Verifique as credenciais do funcionário
         if (this.email.equals(username) && this.password.equals(password)) {
-            return true; // Credenciais corretas
+            return true;
         } else {
-            return false; // Credenciais incorretas
+            return false;
         }
     }
 
