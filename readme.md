@@ -31,7 +31,7 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 
 **Qual requisito não é funcional?** Usabilidade.
 
-**Qual a imporância?** Experiência do Usuário (UX).
+**Qual a importância?** Experiência do Usuário (UX).
 
 **Como obter este requisito não funcional no meu software?** Aplicando estas 10 heurísticas. 
 
