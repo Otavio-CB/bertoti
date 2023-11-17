@@ -91,11 +91,11 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 
 ## Construir Diagrama de Caso de Uso - Atividade 4
 
-<img src="engenharia_sw/img/caso_de_uso.drawio.png" alt="caso de uso">
+<img src="engenharia_sw/img/caso_de_uso.drawio.png" alt="caso de uso" width="500">
 
 ## Construir Diagrama UML - Atividade 5
 
-<img src="engenharia_sw/img/uml.drawio.png" alt="caso de uso">
+<img src="engenharia_sw/img/uml.drawio.png" alt="caso de uso" width="500">
 
 ## Código Java (Espelhando classe UML) - Atividade 6
 
