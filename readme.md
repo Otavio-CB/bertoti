@@ -42,32 +42,52 @@ O desenvolvimento de software envolve fazer compensações para encontrar equil�
 **Visibilidade do status do sistema** 
 - **Acerto:** Barra de carregamento de vídeo do Youtube. / **Erro:** Falta de indicador de progresso durante o carregamento de uma página.
 
+<img src="engenharia_sw\img\visiblidadeSistema.png" alt="caso de uso" width="300">
+
 **Correspondência entre o sistema e o mundo real** 
 - **Acerto:** Sistema de localização (GPS) / **Erro:** Uso de linguagem técnica ao invés de uma linguagem simples e compreensível.
 
+<img src="engenharia_sw\img\sistemaMundoReal.jpg" alt="caso de uso" width="300">
+
 **Controle e liberdade do usuário** 
-- **Acerto:** Botão para desfazer alguma ação. / **Erro:** Botão para cancelar processo longo ou para salvar esse processo no meio do caminho.
+- **Acerto:** Botão para desfazer alguma ação. / **Erro:** Não haver um botão para cancelar processo longo ou para salvar esse processo no meio do caminho.
+
+<img src="engenharia_sw\img\controleLiberdade.png" alt="caso de uso" width="300">
 
 **Consistência e padrões** 
-- **Acerto:** Icones padrões, como uma lupa para pesquisar, carrinho para comprar. / **Erro:** Mudar a ordem e localidade dos botões em diferentes telas.
+- **Acerto:** Icones padrões, como uma lupa para pesquisar, carrinho para comprar. / **Erro:** Mudar a ordem, localidade e icones dos botões em diferentes telas.
+
+<img src="engenharia_sw\img\consistenciaPadronizacao.png" alt="caso de uso" width="300">
 
 **Prevenção de erros** 
 - **Acerto:** Impedir que o usuário delete o arquivo em uso. / **Erro:** Fazer alterações em pastas essênciais sem aviso prévio. 
 
+<img src="engenharia_sw\img\prevencaoErros.png" alt="caso de uso" width="300">
+
 **Reconhecimento em vez de lembrança** 
 - **Acerto:** Usar icones padrão, como a lixeira para simbolizar exclusão. / **Erro:** Utilizar icones fora de contexto.
+
+<img src="engenharia_sw\img\reconhecimentoRecordacao.png" alt="caso de uso" width="300">
 
 **Flexibilidade e eficiência de uso** 
 - **Acerto:** Atalhos para realizar funções. / **Erro:** Não personalização dos próprios atalhos.
 
+<img src="engenharia_sw\img\eficienciaFlexibilidade.png" alt="caso de uso" width="300">
+
 **Design estético e minimalista** 
 - **Acerto:** Fácil e intuítivo para navegar. / **Erro:** Falta de personalização e funções.
+
+<img src="engenharia_sw\img\esteticaMinimalista.png" alt="caso de uso" width="300">
 
 **Ajude os usuários a reconhecer, diagnosticar e recuperar-se de erros** 
 - **Acerto:** Mensagem de erro com uma linguagem simples para o usuário. /  **Erro:** Mensagem de erro genérica e com linguagem técnica.
 
+<img src="engenharia_sw\img\recuperarErros.png" alt="caso de uso" width="300">
+
 **Ajuda e documentação** 
 - **Acerto:** Ajuda para reconhecer o erro para melhor saná-lo / **Erro:** Não disponibilizar nenhuma forma de consulta.
+
+<img src="engenharia_sw\img\ajudaDocumentacao.png" alt="caso de uso" width="300">
 
 ## Construir Diagrama de Caso de Uso - Atividade 4
 
