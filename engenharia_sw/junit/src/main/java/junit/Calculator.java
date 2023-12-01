@@ -1,7 +1,7 @@
 package junit;
 
 // Calculator.java
-public class Calculadora {
+public class Calculator {
     public int somar(int a, int b) {
         return a + b;
     }

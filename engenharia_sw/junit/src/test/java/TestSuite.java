@@ -2,44 +2,44 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import junit.Calculadora;
+import junit.Calculator;
 import junit.Test2;
 
 public class TestSuite {
 
     @Test
     public void testSomar() {
-        Calculadora calculadora = new Calculadora();
-        int resultado = calculadora.somar(2, 3);
+        Calculator calculator = new Calculator();
+        int resultado = calculator.somar(2, 3);
         assertEquals(5, resultado);
     }
 
     @Test
     public void testSubtrair() {
-        Calculadora calculadora = new Calculadora();
-        int resultado = calculadora.subtrair(5, 3);
+        Calculator calculator = new Calculator();
+        int resultado = calculator.subtrair(5, 3);
         assertEquals(2, resultado);
     }
 
     @Test
     public void testMultiplicar() {
-        Calculadora calculadora = new Calculadora();
-        int resultado = calculadora.multiplicar(4, 3);
+        Calculator calculator = new Calculator();
+        int resultado = calculator.multiplicar(4, 3);
         assertEquals(12, resultado);
     }
 
     @Test
     public void testDividir() {
-        Calculadora calculadora = new Calculadora();
-        int resultado = calculadora.dividir(8, 2);
+        Calculator calculator = new Calculator();
+        int resultado = calculator.dividir(8, 2);
         assertEquals(4, resultado);
     }
 
     @Test
     public void testDividirPorZero() {
-        Calculadora calculadora = new Calculadora();
+        Calculator calculator = new Calculator();
         assertThrows(ArithmeticException.class, () -> {
-            calculadora.dividir(10, 0);
+            calculator.dividir(10, 0);
         });
     }
 
