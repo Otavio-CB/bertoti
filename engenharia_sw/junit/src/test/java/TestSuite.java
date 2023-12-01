@@ -1,24 +1,46 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import junit.Test1;
+import junit.Calculadora;
 import junit.Test2;
 
 public class TestSuite {
 
     @Test
-    public void testAdd() {
-        Test1 calculator = new Test1();
-        int result = calculator.add(3, 5);
-        assertEquals(8, result);
+    public void testSomar() {
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.somar(2, 3);
+        assertEquals(5, resultado);
     }
 
     @Test
-    public void testAddWithNegativeNumbers() {
-        Test1 calculator = new Test1();
-        int result = calculator.add(-3, 5);
-        assertEquals(2, result);
+    public void testSubtrair() {
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.subtrair(5, 3);
+        assertEquals(2, resultado);
+    }
+
+    @Test
+    public void testMultiplicar() {
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.multiplicar(4, 3);
+        assertEquals(12, resultado);
+    }
+
+    @Test
+    public void testDividir() {
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.dividir(8, 2);
+        assertEquals(4, resultado);
+    }
+
+    @Test
+    public void testDividirPorZero() {
+        Calculadora calculadora = new Calculadora();
+        assertThrows(ArithmeticException.class, () -> {
+            calculadora.dividir(10, 0);
+        });
     }
 
     @Test
