@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Person Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      async function fetchPersons() {
+        const response = await fetch("/api/persons");
+        const persons = await response.json();
+        const personList = document.getElementById("personList");
+        personList.innerHTML = "";
+        persons.forEach((person) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+                    ${person.name} (Age: ${person.age}) 
+                    <div>
+                        <button class="edit" onclick="editPerson(${person.id}, '${person.name}', ${person.age})">Edit</button>
+                        <button class="delete" onclick="deletePerson(${person.id})">Delete</button>
+                    </div>
+                `;
+          personList.appendChild(li);
+        });
+      }
+
+      async function addPerson() {
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+
+        const response = await fetch("/api/persons", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, age }),
+        });
+
+        if (response.ok) {
+          fetchPersons();
+          resetForm();
+        }
+      }
+
+      async function editPerson(id, name, age) {
+        document.getElementById("personId").value = id;
+        document.getElementById("name").value = name;
+        document.getElementById("age").value = age;
+        document.getElementById("submitButton").textContent = "Update Person";
+      }
+
+      async function updatePerson() {
+        const id = document.getElementById("personId").value;
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+
+        const response = await fetch(`/api/persons/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, age }),
+        });
+
+        if (response.ok) {
+          fetchPersons();
+          resetForm();
+        }
+      }
+
+      async function deletePerson(id) {
+        const response = await fetch(`/api/persons/${id}`, {
+          method: "DELETE",
+        });
+
+        if (response.ok) {
+          fetchPersons();
+        }
+      }
+
+      function handleSubmit() {
+        const id = document.getElementById("personId").value;
+        if (id) {
+          updatePerson();
+        } else {
+          addPerson();
+        }
+      }
+
+      function resetForm() {
+        document.getElementById("personId").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("submitButton").textContent = "Add Person";
+      }
+
+      window.onload = fetchPersons;
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Person Management</h1>
+      <ul id="personList"></ul>
+      <h2>Add/Edit Person</h2>
+      <input type="hidden" id="personId" />
+      <input type="text" id="name" placeholder="Name" />
+      <input type="number" id="age" placeholder="Age" />
+      <button id="submitButton" onclick="handleSubmit()">Add Person</button>
+    </div>
+  </body>
+</html>
