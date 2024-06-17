@@ -25,4 +25,10 @@ A API oferece os seguintes endpoints:
 - `PUT /api/users/{id}`: Atualiza as informações de um usuário existente com base no ID fornecido.
 - `DELETE /api/users/{id}`: Remove um usuário existente com base no ID fornecido.
 
+![Imagem de Exemplo 1](assets/img.png)
+![Imagem de Exemplo 1](assets/img_1.png)
+![Imagem de Exemplo 1](assets/img_2.png)
+![Imagem de Exemplo 1](assets/img_3.png)
+![Imagem de Exemplo 1](assets/img_4.png)
+
 Para interagir com a API, você pode usar ferramentas como o [Postman](https://www.postman.com/downloads/) ou fazer solicitações HTTP diretamente.
