@@ -38,7 +38,7 @@ necessário configurar as fontes de dados envolvidas para que a plataforma funci
 configuração é feita manualmente, o que é um passo crítico e demorado para os técnicos. O desafio, portanto, é criar uma
 interface amigável para facilitar essa configuração das fontes de dados.
 
-[GIT - Dom Rock](https://github.com/wiz-fatec/dom-rock-pipeline-configurator)
+[GIT - Dom Rock Pipeline](https://github.com/wiz-fatec/dom-rock-pipeline-configurator)
 
 #### Tecnologias Utilizadas
 
@@ -60,42 +60,46 @@ para o projeto. -->
    transações e criação de APIs REST. Facilitando a criação de aplicações web e microserviços.
 
 
-3. **CSS**  
+3. **HTML**  
+ HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
+
+
+4. **CSS**  
    Linguagem de estilo usada para descrever a apresentação de documentos HTML. Foi importante para estilizar e formatar
    páginas web, melhorando a aparência e a experiência do usuário.
 
 
-4. **Vue.js**  
+5. **Vue.js**  
    Framework JavaScript para construção de interfaces de usuário interativas. Facilita a criação de aplicações web
    dinâmicas e reativas com uma arquitetura de componentes.
 
 
-5. **MySQL**  
+6. **MySQL**  
    Sistema de gerenciamento de banco de dados relacional. Crucial para armazenar e gerenciar dados de forma estruturada
    em aplicações web.
 
 
-6. **Git**  
+7. **Git**  
    Sistema de controle de versão distribuído. Essencial para rastrear mudanças no código-fonte e colaborar com outros
    desenvolvedores de forma eficiente.
 
 
-7. **GitHub**  
+8. **GitHub**  
    Plataforma de hospedagem para projetos que utilizam Git. Importante para o compartilhamento de código, colaboração e
    controle de versão em projetos de software.
 
 
-8. **IntelliJ IDEA**  
+9. **IntelliJ IDEA**  
    Ambiente de desenvolvimento integrado (IDE) para programação Java e outros idiomas. Facilita o desenvolvimento com
    suporte avançado para código, debugging e testes.
 
 
-9. **WebStorm**  
+10. **WebStorm**  
    IDE da JetBrains focada em JavaScript, HTML e CSS. Ideal para o desenvolvimento de aplicações web modernas e
    front-end.
 
 
-10. **Stack Overflow**  
+11. **Stack Overflow**  
     Plataforma de perguntas e respostas para desenvolvedores. Importante para obter suporte, resolver problemas e
     aprender com a comunidade de programadores.
 
@@ -120,6 +124,8 @@ Neste projeto atuei como FullStack, porém com maior participação no Frontend 
 
 </details>
 
+---
+
 <details>
 <summary>Adição das versões iniciais para o processamento de CSV e JSON</summary>
 
@@ -132,6 +138,8 @@ Neste projeto atuei como FullStack, porém com maior participação no Frontend 
   alinhadas com a arquitetura do projeto.
 
 </details>
+
+---
 
 <details>
 <summary>Adição do método de atualização de campos na classe LZMetadataConfig</summary>
@@ -149,135 +157,202 @@ O método realiza as seguintes atualizações:
 ![img.png](assets/img.png)
 </details>
 
+---
+
 <details>
-<summary>Adição do método PUT para atualização de configuração e aprimoramentos na classe MetadataConfigDTO</summary>
+<summary>Implementação do Método PUT para Atualização de Configurações</summary>
 
-1. Implementação do Método PUT no Controlador
-   Rota: /list-view
-    - Adicionado o método updateConfig com a anotação @PutMapping, permitindo a atualização de configurações.
-      O método recebe um objeto MetadataConfigDTO via @RequestBody e tenta localizar a configuração correspondente
-      usando o fileId.
-      Se a configuração é encontrada, os campos são atualizados usando o método updateFields e a configuração é salva no
-      repositório.
-      Em caso de sucesso, retorna um ResponseEntity com o objeto atualizado; caso contrário, retorna um
-      ResponseEntity.notFound().
-      ![img_1.png](assets/img_1.png)
+### 1. Método PUT para Atualização de Configurações
 
-2. Alteração no Método GET
-    - Modificado o método details no controlador:
-      A lógica de busca foi alterada de getReferenceById para findById, usando Optional para lidar com possíveis valores
-      nulos.
-      Garante que o retorno seja um ResponseEntity adequado, encapsulando o Optional adequadamente.
-      ![img_2.png](assets/img_2.png)
-3. Atualização da Classe MetadataConfigDTO
-    - Atualizado o construtor do record MetadataConfigDTO para refletir corretamente os campos da entidade
-      LZMetadataConfig.
-      Agora o construtor recebe um objeto LZMetadataConfig e uma lista de ColumnConfig, preenchendo os respectivos
-      campos no DTO.
-      ![img_3.png](assets/img_3.png)
-4. Aprimoramento do Método updateFields em LZMetadataConfig
-    - O método updateFields foi estendido para incluir:
-      Atualização da lista columns se a mesma estiver presente no MetadataConfigDTO.
-      Limpeza da lista columns existente antes de atualizá-la com os novos valores.
-      Isso assegura que as colunas sejam atualizadas corretamente e sem redundâncias.
-      ![img_4.png](assets/img_4.png)
+- **Rota:** `/list-view`
+- **Método:** `updateConfig`
+    - Implementado o método `updateConfig` com a anotação `@PutMapping`.
+    - Recebe um objeto `MetadataConfigDTO` via `@RequestBody`.
+    - Localiza a configuração correspondente usando o `fileId`.
+    - Se encontrada, atualiza os campos com o método `updateFields` e salva a configuração no repositório.
+    - Retorna um `ResponseEntity` com o objeto atualizado em caso de sucesso, ou `ResponseEntity.notFound()` em caso de falha.
+
+  ![img_1.png](assets/img_1.png)
 
 </details>
 
-<details>
-<summary>Adição das tabelas de empresa, usuário e permissão</summary>
-
-1. Criação das Tabelas de Empresa, Usuário e Permissão
-
-- Tabela permission:
-
-    - Criada a tabela com colunas para id_permission, description, e type.
-    - type possui uma restrição CHECK, limitando os valores para 'lz', 'bronze', ou 'silver'.
-
-- Tabela user:
-
-    - Criada a tabela com colunas para name, email, e password.
-    - email foi definido como a chave primária da tabela.
-
-- Tabela company:
-
-    - Criada a tabela com colunas para cnpj e fantasy_name.
-    - cnpj foi definido como a chave primária da tabela.
-
-2. Modificações na Tabela Existente
-    - Alteração em Tabela de Arquivo:
-    - Adicionada a coluna file_has_header (do tipo INT), indicando se o arquivo possui cabeçalho.
-    - Adicionada a coluna cnpj (do tipo VARCHAR(18)), associando o arquivo à tabela company.
-    - Criada a restrição de chave estrangeira fk_cnpj para a coluna cnpj, referenciando a chave primária da tabela
-      company.
-
-![img_5.png](assets/img_5.png)
-</details>
+---
 
 <details>
-<summary>Adição da tela Silver</summary>
+<summary>Alteração no Método GET para Melhor Manipulação de Valores Nulos</summary>
 
-1. Criação da Tela Silver
+### 2. Alteração no Método GET
 
-- Estrutura do Componente:
+- **Método:** `details`
+    - Alterado o método de busca de `getReferenceById` para `findById`.
+    - Uso de `Optional` para lidar com valores nulos.
+    - Garantia de retorno adequado encapsulando o `Optional` em um `ResponseEntity`.
 
-    - Criado um novo componente Vue para a tela "Silver", que utiliza TypeScript para tipagem forte.
-    - O componente recebe configList, tagInfo, e bronzeConfig como propriedades, configuradas no defineProps.
-
-
-- Lógica de Navegação:
-
-    - Implementada a função gotoSilverConfig que navega para a rota /home ao clicar em um dos botões de configuração.
-
-
-- Validação de Colunas:
-
-    - Desenvolvida a função validOrInvalid para validar colunas dentro do BConfig, embora parte dela esteja comentada
-      para futuras implementações.
-
-2. Template e Estilo:
-
-- Template:
-
-    - Estrutura de layout criada usando um div principal com uma classe container que engloba o título "Silver" e uma
-      série de botões renderizados dinamicamente a partir de configList.
-    - Cada botão exibe o nome da configuração e é interativo, chamando gotoSilverConfig ao ser clicado.
-
-
-- Estilos:
-
-    - Estilos definidos usando SCSS, com classes como .grid-wrap, .banner, .invalid-tag, e .valid-tag para personalizar
-      a aparência dos componentes na tela.
-    - A disposição dos elementos segue um grid layout flexível.
-
-
-3. Integração de Componentes e Modal:
-
-- Componentes Importados:
-
-    - Importados e utilizados os componentes AppHeader, DRModal, e LVSilverContainer para construir a interface da
-      tela "Silver".
-
-
-- Configuração de Estado:
-
-    - Utilizadas referências (ref) para gerenciar a lista de configurações (configList), o estado de exibição do modal (
-      showModal), e a configuração selecionada (selectedConfig).
-
-
-- Chamada de API:
-
-    - Implementada uma função assíncrona getConfig que realiza uma chamada GET
-      para http://localhost:8080/lz-config/list-view e atualiza a lista de configurações (configList) ao montar o
-      componente.
-
-
-- Estilo Escopado:
-
-    - Estilo escopado aplicado ao componente principal, garantindo que as regras CSS sejam aplicadas apenas dentro do
-      contexto do componente "Silver".
+  ![img_2.png](assets/img_2.png)
 
 </details>
+
+---
+
+<details>
+<summary>Atualização da Classe MetadataConfigDTO para Sincronizar Campos</summary>
+
+### 3. Atualização da Classe MetadataConfigDTO
+
+- **Classe:** `MetadataConfigDTO`
+    - Atualizado o construtor da classe para refletir corretamente os campos da entidade `LZMetadataConfig`.
+    - O construtor agora recebe um objeto `LZMetadataConfig` e uma lista de `ColumnConfig`, preenchendo os respectivos campos no DTO.
+
+  ![img_3.png](assets/img_3.png)
+
+</details>
+
+---
+
+<details>
+<summary>Aprimoramento do Método updateFields para Manipulação de Colunas</summary>
+
+### 4. Aprimoramento do Método updateFields
+
+- **Classe:** `LZMetadataConfig`
+    - Estendido o método `updateFields` para incluir a atualização da lista `columns` caso presente no `MetadataConfigDTO`.
+    - Limpeza da lista `columns` existente antes de atualizá-la com os novos valores, evitando redundâncias.
+
+  ![img_4.png](assets/img_4.png)
+
+</details>
+
+---
+
+<details>
+<summary>Criação das Tabelas de Empresa, Usuário e Permissão</summary>
+
+### 1. Criação das Tabelas de Empresa, Usuário e Permissão
+
+- **Tabela:** `permission`
+    - Colunas criadas: `id_permission`, `description`, e `type`.
+    - Restrição `CHECK` em `type`, limitando os valores a `'lz'`, `'bronze'`, ou `'silver'`.
+
+- **Tabela:** `user`
+    - Colunas criadas: `name`, `email`, e `password`.
+    - `email` definido como chave primária.
+
+- **Tabela:** `company`
+    - Colunas criadas: `cnpj` e `fantasy_name`.
+    - `cnpj` definido como chave primária.
+
+</details>
+
+---
+
+<details>
+<summary>Modificações na Tabela Existente de Arquivo</summary>
+
+### 2. Modificações na Tabela Existente
+
+- **Tabela:** `arquivo`
+    - Adicionada a coluna `file_has_header` (do tipo `INT`), indicando se o arquivo possui cabeçalho.
+    - Adicionada a coluna `cnpj` (do tipo `VARCHAR(18)`), associando o arquivo à tabela `company`.
+    - Criada a restrição de chave estrangeira `fk_cnpj` para a coluna `cnpj`, referenciando a chave primária da tabela `company`.
+
+  ![img_5.png](assets/img_5.png)
+
+</details>
+
+---
+
+<details>
+<summary>Criação da Tela Silver</summary>
+
+### 1. Estrutura do Componente
+
+- **Componente:** `Silver`
+    - Criado um novo componente Vue para a tela "Silver", utilizando TypeScript para tipagem forte.
+    - Propriedades recebidas: `configList`, `tagInfo`, e `bronzeConfig`, configuradas no `defineProps`.
+
+</details>
+
+---
+
+<details>
+<summary>Implementação da Lógica de Navegação</summary>
+
+### 2. Lógica de Navegação
+
+- **Função:** `gotoSilverConfig`
+    - Navega para a rota `/home` ao clicar em um dos botões de configuração.
+
+</details>
+
+---
+
+<details>
+<summary>Validação de Colunas no BConfig</summary>
+
+### 3. Validação de Colunas
+
+- **Função:** `validOrInvalid`
+    - Desenvolvida para validar colunas dentro do `BConfig`, com parte do código comentada para futuras implementações.
+
+</details>
+
+---
+
+<details>
+<summary>Criação do Template e Estilo para a Tela Silver</summary>
+
+### 4. Template e Estilo
+
+- **Template:**
+    - Estrutura de layout com um `div` principal que contém uma classe `container`, exibindo o título "Silver" e botões gerados dinamicamente a partir de `configList`.
+    - Cada botão exibe o nome da configuração e chama `gotoSilverConfig` ao ser clicado.
+
+- **Estilos:**
+    - Definidos com SCSS, utilizando classes como `.grid-wrap`, `.banner`, `.invalid-tag`, e `.valid-tag` para personalizar a aparência.
+    - Disposição dos elementos seguindo um grid layout flexível.
+
+</details>
+
+---
+
+<details>
+<summary>Integração de Componentes e Gerenciamento de Estado</summary>
+
+### 5. Integração de Componentes e Modal
+
+- **Componentes Importados:**
+    - Componentes: `AppHeader`, `DRModal`, e `LVSilverContainer`, utilizados para compor a interface da tela "Silver".
+
+- **Gerenciamento de Estado:**
+    - Utilizadas referências (`ref`) para controlar a lista de configurações (`configList`), o estado do modal (`showModal`), e a configuração selecionada (`selectedConfig`).
+
+</details>
+
+---
+
+<details>
+<summary>Chamada de API para Atualização da Lista de Configurações</summary>
+
+### 6. Chamada de API
+
+- **Função Assíncrona:** `getConfig`
+    - Realiza uma chamada `GET` para `http://localhost:8080/lz-config/list-view` e atualiza `configList` ao montar o componente.
+
+</details>
+
+---
+
+<details>
+<summary>Aplicação de Estilo Escopado</summary>
+
+### 7. Estilo Escopado
+
+- **Estilo:** Escopado ao componente principal para garantir que as regras CSS sejam aplicadas apenas no contexto do componente "Silver".
+
+</details>
+
+
+---
 
 <details>
 <summary>Atualização do Alinhamento do Botão de Cadastro</summary>
@@ -301,71 +376,92 @@ O método realiza as seguintes atualizações:
 
 </details>
 
+---
+
 <details>
-<summary>Adição do Componente DonutChart</summary>
+<summary>Integração do vue-chartjs e Chart.js</summary>
 
-1. Integração do vue-chartjs e Chart.js
+### 1. Integração do vue-chartjs e Chart.js
 
-- Nova Dependência:
-    - Adicionada a dependência vue-chartjs versão 5.3.1 ao projeto, permitindo a criação de gráficos no Vue 3.
-
-
-2. Criação do Componente DonutChart
-
-- Estrutura do Template:
-
-    - Criado um componente DonutChart que utiliza o gráfico de rosca (Doughnut) do vue-chartjs.
-    - O gráfico é renderizado dentro de um contêiner (chart-container), que define a largura máxima e altura do gráfico.
-
-
-- Lógica do Script:
-
-    - Importados e registrados os elementos do Chart.js necessários para o gráfico de rosca, incluindo Title, Tooltip,
-      Legend, ArcElement, e CategoryScale.
-    - Definida a interface ChartDataProps para tipagem das propriedades recebidas (labels, values, colors, title).
-    - Configurados os dados do gráfico (chartData) utilizando as propriedades recebidas via defineProps.
-    - Definidas as opções do gráfico (chartOptions), com foco em responsividade, manutenção da proporção e estilização
-      das legendas e título.
-
-
-3. Estilo do Componente
-
-- CSS Scoped:
-    - Estilizado o contêiner do gráfico (chart-container) para centralizar o gráfico na tela, limitando a largura máxima
-      a 800px e altura a 400px.
-
-
-4. Exemplo de Uso
-
-- Importação e Utilização:
-    - O componente DonutChart foi importado e utilizado, com dados de exemplo para representar configurações por
-      empresa.
-    - Exemplo de dados (chartData) inclui etiquetas, valores e cores para as seções do gráfico, com um título
-      especificando "Configurações por empresa".
+- **Nova Dependência:**
+    - Adicionada a dependência `vue-chartjs` versão 5.3.1 ao projeto, permitindo a criação de gráficos no Vue 3.
 
 </details>
 
+---
+
 <details>
-<summary>Atualização das Cores no DonutChart</summary>
+<summary>Criação do Componente DonutChart</summary>
 
-1. Modificação das Cores do Gráfico de Rosca
+### 2. Criação do Componente DonutChart
 
-- Alteração de Cores:
-    - As cores utilizadas no gráfico de rosca (DonutChart) foram atualizadas para uma nova paleta, garantindo maior
-      contraste e diferenciação entre as seções do gráfico:
-        - #fa2e59 (Vermelho intenso)
-        - #ff703f (Laranja)
-        - #f7bc05 (Amarelo)
-        - #ecf6bb (Verde claro)
-        - #76bcad (Verde azulado)
+- **Estrutura do Template:**
+    - Criado o componente `DonutChart`, utilizando o gráfico de rosca (`Doughnut`) do `vue-chartjs`.
+    - O gráfico é renderizado dentro de um contêiner (`chart-container`), que define a largura máxima e altura do gráfico.
 
-2. Manutenção da Estrutura dos Dados
-
-- Estrutura Inalterada:
-    - A estrutura dos dados (chartData) incluindo etiquetas (labels), valores (values), e título (title) permaneceu a
-      mesma, mantendo a integridade do gráfico.
+- **Lógica do Script:**
+    - Importados e registrados os elementos do `Chart.js` necessários para o gráfico de rosca: `Title`, `Tooltip`, `Legend`, `ArcElement`, e `CategoryScale`.
+    - Definida a interface `ChartDataProps` para tipagem das propriedades recebidas (`labels`, `values`, `colors`, `title`).
+    - Configurados os dados do gráfico (`chartData`) utilizando as propriedades recebidas via `defineProps`.
+    - Definidas as opções do gráfico (`chartOptions`), focadas em responsividade, manutenção da proporção e estilização das legendas e título.
 
 </details>
+
+---
+
+<details>
+<summary>Estilo do Componente</summary>
+
+### 3. Estilo do Componente
+
+- **CSS Scoped:**
+    - Estilizado o contêiner do gráfico (`chart-container`) para centralizar o gráfico na tela, limitando a largura máxima a 800px e altura a 400px.
+
+</details>
+
+---
+
+<details>
+<summary>Exemplo de Uso do Componente DonutChart</summary>
+
+### 4. Exemplo de Uso
+
+- **Importação e Utilização:**
+    - O componente `DonutChart` foi importado e utilizado, com dados de exemplo para representar configurações por empresa.
+    - Exemplo de dados (`chartData`) inclui etiquetas, valores e cores para as seções do gráfico, com um título especificando "Configurações por empresa".
+
+</details>
+
+---
+
+<details>
+<summary>Modificação das Cores do Gráfico de Rosca</summary>
+
+### 1. Modificação das Cores do Gráfico de Rosca
+
+- **Alteração de Cores:**
+    - As cores utilizadas no gráfico de rosca (`DonutChart`) foram atualizadas para uma nova paleta, garantindo maior contraste e diferenciação entre as seções do gráfico:
+        - `#fa2e59` (Vermelho intenso)
+        - `#ff703f` (Laranja)
+        - `#f7bc05` (Amarelo)
+        - `#ecf6bb` (Verde claro)
+        - `#76bcad` (Verde azulado)
+
+</details>
+
+---
+
+<details>
+<summary>Manutenção da Estrutura dos Dados</summary>
+
+### 2. Manutenção da Estrutura dos Dados
+
+- **Estrutura Inalterada:**
+    - A estrutura dos dados (`chartData`), incluindo etiquetas (`labels`), valores (`values`), e título (`title`), permaneceu a mesma, mantendo a integridade do gráfico.
+
+</details>
+
+---
 
 <details>
 <summary>Atualização das Cores e Margem Superior do Gráfico; Adição de Rota para Tela de Gráfico</summary>
@@ -388,6 +484,8 @@ O método realiza as seguintes atualizações:
     - Direção dos itens dentro da checkBox definida como row e justificada para flex-start.
 
 </details>
+
+---
 
 #### Hard Skills
 
