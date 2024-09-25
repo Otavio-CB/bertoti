@@ -47,8 +47,6 @@ para o projeto. -->
 
 ![My Skills](https://skillicons.dev/icons?i=java,spring,html,css,vue,mysql,git,github,idea,webstorm,stackoverflow)
 
-<details>
-  <summary>Tecnologias Utilizadas e Importância</summary>
 
 1. **Java**  
    Linguagem de programação amplamente usada para desenvolvimento da aplicação, utilizado somente no backend. Foi
@@ -103,7 +101,6 @@ para o projeto. -->
     Plataforma de perguntas e respostas para desenvolvedores. Importante para obter suporte, resolver problemas e
     aprender com a comunidade de programadores.
 
-</details>
 <br>
 
 #### Contribuições Pessoais
