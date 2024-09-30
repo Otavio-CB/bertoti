@@ -1,0 +1,1 @@
+![strategy](src/main/resources/docs/strategy.png)
