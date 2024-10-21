@@ -112,19 +112,15 @@ Neste projeto atuei como FullStack, porém com maior participação no Frontend 
 
 
 <details>
-<summary>Adição da dependência GSON ao projeto</summary>
+<summary>Adição das versões iniciais para o processamento de CSV e JSON e sua dependência</summary>
 
+- Adição da dependência GSON ao projeto
 - Realizada a manipulação do arquivo pom.xml para incluir a dependência GSON.
   A versão 2.10.1 da biblioteca GSON foi adicionada, permitindo a conversão de objetos Java para JSON e vice-versa.
   Esta modificação aprimora o projeto, fornecendo suporte robusto para serialização e deserialização de dados JSON, o
   que é essencial para a manipulação eficiente de dados no Spring Boot.
 
-</details>
-
 ---
-
-<details>
-<summary>Adição das versões iniciais para o processamento de CSV e JSON</summary>
 
 - Criados esboços iniciais das classes para processamento de dados CSV e JSON, localizadas no pacote com.domrock.utils.
 - **CsvConverter**: Classe inicial para futuras implementações de conversão e processamento de arquivos CSV.
@@ -357,7 +353,7 @@ O método realiza as seguintes atualizações:
 1. Ajuste de Estilo para o Botão de Cadastro
 
 - Modificação de Margem:
-    - Ajustada a margem da classe .saveButton, que contém o botão de cadastro (DRButton), para -80px, visando alinhar
+    - Ajustada a margem da classe saveButton, que contém o botão de cadastro (DRButton), para -80px, visando alinhar
       melhor o botão no layout.
 
 
@@ -376,21 +372,12 @@ O método realiza as seguintes atualizações:
 ---
 
 <details>
-<summary>Integração do vue-chartjs e Chart.js</summary>
-
-### 1. Integração do vue-chartjs e Chart.js
-
-- **Nova Dependência:**
-    - Adicionada a dependência `vue-chartjs` versão 5.3.1 ao projeto, permitindo a criação de gráficos no Vue 3.
-
-</details>
-
----
-
-<details>
 <summary>Criação do Componente DonutChart</summary>
 
 ### 2. Criação do Componente DonutChart
+
+- **Nova Dependência:**
+- Adicionada a dependência `vue-chartjs` versão 5.3.1 ao projeto, permitindo a criação de gráficos no Vue 3.
 
 - **Estrutura do Template:**
     - Criado o componente `DonutChart`, utilizando o gráfico de rosca (`Doughnut`) do `vue-chartjs`.
@@ -401,18 +388,6 @@ O método realiza as seguintes atualizações:
     - Definida a interface `ChartDataProps` para tipagem das propriedades recebidas (`labels`, `values`, `colors`, `title`).
     - Configurados os dados do gráfico (`chartData`) utilizando as propriedades recebidas via `defineProps`.
     - Definidas as opções do gráfico (`chartOptions`), focadas em responsividade, manutenção da proporção e estilização das legendas e título.
-
-</details>
-
----
-
-<details>
-<summary>Estilo do Componente</summary>
-
-### 3. Estilo do Componente
-
-- **CSS Scoped:**
-    - Estilizado o contêiner do gráfico (`chart-container`) para centralizar o gráfico na tela, limitando a largura máxima a 800px e altura a 400px.
 
 </details>
 
@@ -432,7 +407,7 @@ O método realiza as seguintes atualizações:
 ---
 
 <details>
-<summary>Modificação das Cores do Gráfico de Rosca</summary>
+<summary>Atualização das Cores e Margem Superior do Gráfico; Adição de Rota para Tela de Gráfico</summary>
 
 ### 1. Modificação das Cores do Gráfico de Rosca
 
@@ -443,25 +418,6 @@ O método realiza as seguintes atualizações:
         - `#f7bc05` (Amarelo)
         - `#ecf6bb` (Verde claro)
         - `#76bcad` (Verde azulado)
-
-</details>
-
----
-
-<details>
-<summary>Manutenção da Estrutura dos Dados</summary>
-
-### 2. Manutenção da Estrutura dos Dados
-
-- **Estrutura Inalterada:**
-    - A estrutura dos dados (`chartData`), incluindo etiquetas (`labels`), valores (`values`), e título (`title`), permaneceu a mesma, mantendo a integridade do gráfico.
-
-</details>
-
----
-
-<details>
-<summary>Atualização das Cores e Margem Superior do Gráfico; Adição de Rota para Tela de Gráfico</summary>
 
 1. Ajuste de Estilo para o Botão de Cadastro
 
