@@ -47,7 +47,6 @@ para o projeto. -->
 
 ![My Skills](https://skillicons.dev/icons?i=java,spring,html,css,vue,mysql,git,github,idea,webstorm,stackoverflow)
 
-
 1. **Java**  
    Linguagem de programação amplamente usada para desenvolvimento da aplicação, utilizado somente no backend. Foi
    importante para criar uma aplicação robusta e escalável.
@@ -59,7 +58,7 @@ para o projeto. -->
 
 
 3. **HTML**  
- HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
+   HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
 
 
 4. **CSS**  
@@ -93,8 +92,8 @@ para o projeto. -->
 
 
 10. **WebStorm**  
-   IDE da JetBrains focada em JavaScript, HTML e CSS. Ideal para o desenvolvimento de aplicações web modernas e
-   front-end.
+    IDE da JetBrains focada em JavaScript, HTML e CSS. Ideal para o desenvolvimento de aplicações web modernas e
+    front-end.
 
 
 11. **Stack Overflow**  
@@ -163,7 +162,8 @@ O método realiza as seguintes atualizações:
     - Recebe um objeto `MetadataConfigDTO` via `@RequestBody`.
     - Localiza a configuração correspondente usando o `fileId`.
     - Se encontrada, atualiza os campos com o método `updateFields` e salva a configuração no repositório.
-    - Retorna um `ResponseEntity` com o objeto atualizado em caso de sucesso, ou `ResponseEntity.notFound()` em caso de falha.
+    - Retorna um `ResponseEntity` com o objeto atualizado em caso de sucesso, ou `ResponseEntity.notFound()` em caso de
+      falha.
 
   ![img_1.png](assets/img_1.png)
 
@@ -194,7 +194,8 @@ O método realiza as seguintes atualizações:
 
 - **Classe:** `MetadataConfigDTO`
     - Atualizado o construtor da classe para refletir corretamente os campos da entidade `LZMetadataConfig`.
-    - O construtor agora recebe um objeto `LZMetadataConfig` e uma lista de `ColumnConfig`, preenchendo os respectivos campos no DTO.
+    - O construtor agora recebe um objeto `LZMetadataConfig` e uma lista de `ColumnConfig`, preenchendo os respectivos
+      campos no DTO.
 
   ![img_3.png](assets/img_3.png)
 
@@ -208,7 +209,8 @@ O método realiza as seguintes atualizações:
 ### 4. Aprimoramento do Método updateFields
 
 - **Classe:** `LZMetadataConfig`
-    - Estendido o método `updateFields` para incluir a atualização da lista `columns` caso presente no `MetadataConfigDTO`.
+    - Estendido o método `updateFields` para incluir a atualização da lista `columns` caso presente no
+      `MetadataConfigDTO`.
     - Limpeza da lista `columns` existente antes de atualizá-la com os novos valores, evitando redundâncias.
 
   ![img_4.png](assets/img_4.png)
@@ -246,7 +248,8 @@ O método realiza as seguintes atualizações:
 - **Tabela:** `arquivo`
     - Adicionada a coluna `file_has_header` (do tipo `INT`), indicando se o arquivo possui cabeçalho.
     - Adicionada a coluna `cnpj` (do tipo `VARCHAR(18)`), associando o arquivo à tabela `company`.
-    - Criada a restrição de chave estrangeira `fk_cnpj` para a coluna `cnpj`, referenciando a chave primária da tabela `company`.
+    - Criada a restrição de chave estrangeira `fk_cnpj` para a coluna `cnpj`, referenciando a chave primária da tabela
+      `company`.
 
   ![img_5.png](assets/img_5.png)
 
@@ -297,11 +300,13 @@ O método realiza as seguintes atualizações:
 ### 4. Template e Estilo
 
 - **Template:**
-    - Estrutura de layout com um `div` principal que contém uma classe `container`, exibindo o título "Silver" e botões gerados dinamicamente a partir de `configList`.
+    - Estrutura de layout com um `div` principal que contém uma classe `container`, exibindo o título "Silver" e botões
+      gerados dinamicamente a partir de `configList`.
     - Cada botão exibe o nome da configuração e chama `gotoSilverConfig` ao ser clicado.
 
 - **Estilos:**
-    - Definidos com SCSS, utilizando classes como `.grid-wrap`, `.banner`, `.invalid-tag`, e `.valid-tag` para personalizar a aparência.
+    - Definidos com SCSS, utilizando classes como `.grid-wrap`, `.banner`, `.invalid-tag`, e `.valid-tag` para
+      personalizar a aparência.
     - Disposição dos elementos seguindo um grid layout flexível.
 
 </details>
@@ -317,7 +322,8 @@ O método realiza as seguintes atualizações:
     - Componentes: `AppHeader`, `DRModal`, e `LVSilverContainer`, utilizados para compor a interface da tela "Silver".
 
 - **Gerenciamento de Estado:**
-    - Utilizadas referências (`ref`) para controlar a lista de configurações (`configList`), o estado do modal (`showModal`), e a configuração selecionada (`selectedConfig`).
+    - Utilizadas referências (`ref`) para controlar a lista de configurações (`configList`), o estado do modal (
+      `showModal`), e a configuração selecionada (`selectedConfig`).
 
 </details>
 
@@ -329,7 +335,8 @@ O método realiza as seguintes atualizações:
 ### 6. Chamada de API
 
 - **Função Assíncrona:** `getConfig`
-    - Realiza uma chamada `GET` para `http://localhost:8080/lz-config/list-view` e atualiza `configList` ao montar o componente.
+    - Realiza uma chamada `GET` para `http://localhost:8080/lz-config/list-view` e atualiza `configList` ao montar o
+      componente.
 
 </details>
 
@@ -340,7 +347,8 @@ O método realiza as seguintes atualizações:
 
 ### 7. Estilo Escopado
 
-- **Estilo:** Escopado ao componente principal para garantir que as regras CSS sejam aplicadas apenas no contexto do componente "Silver".
+- **Estilo:** Escopado ao componente principal para garantir que as regras CSS sejam aplicadas apenas no contexto do
+  componente "Silver".
 
 </details>
 
@@ -381,13 +389,17 @@ O método realiza as seguintes atualizações:
 
 - **Estrutura do Template:**
     - Criado o componente `DonutChart`, utilizando o gráfico de rosca (`Doughnut`) do `vue-chartjs`.
-    - O gráfico é renderizado dentro de um contêiner (`chart-container`), que define a largura máxima e altura do gráfico.
+    - O gráfico é renderizado dentro de um contêiner (`chart-container`), que define a largura máxima e altura do
+      gráfico.
 
 - **Lógica do Script:**
-    - Importados e registrados os elementos do `Chart.js` necessários para o gráfico de rosca: `Title`, `Tooltip`, `Legend`, `ArcElement`, e `CategoryScale`.
-    - Definida a interface `ChartDataProps` para tipagem das propriedades recebidas (`labels`, `values`, `colors`, `title`).
+    - Importados e registrados os elementos do `Chart.js` necessários para o gráfico de rosca: `Title`, `Tooltip`,
+      `Legend`, `ArcElement`, e `CategoryScale`.
+    - Definida a interface `ChartDataProps` para tipagem das propriedades recebidas (`labels`, `values`, `colors`,
+      `title`).
     - Configurados os dados do gráfico (`chartData`) utilizando as propriedades recebidas via `defineProps`.
-    - Definidas as opções do gráfico (`chartOptions`), focadas em responsividade, manutenção da proporção e estilização das legendas e título.
+    - Definidas as opções do gráfico (`chartOptions`), focadas em responsividade, manutenção da proporção e estilização
+      das legendas e título.
 
 </details>
 
@@ -399,8 +411,10 @@ O método realiza as seguintes atualizações:
 ### 4. Exemplo de Uso
 
 - **Importação e Utilização:**
-    - O componente `DonutChart` foi importado e utilizado, com dados de exemplo para representar configurações por empresa.
-    - Exemplo de dados (`chartData`) inclui etiquetas, valores e cores para as seções do gráfico, com um título especificando "Configurações por empresa".
+    - O componente `DonutChart` foi importado e utilizado, com dados de exemplo para representar configurações por
+      empresa.
+    - Exemplo de dados (`chartData`) inclui etiquetas, valores e cores para as seções do gráfico, com um título
+      especificando "Configurações por empresa".
 
 </details>
 
@@ -412,7 +426,8 @@ O método realiza as seguintes atualizações:
 ### 1. Modificação das Cores do Gráfico de Rosca
 
 - **Alteração de Cores:**
-    - As cores utilizadas no gráfico de rosca (`DonutChart`) foram atualizadas para uma nova paleta, garantindo maior contraste e diferenciação entre as seções do gráfico:
+    - As cores utilizadas no gráfico de rosca (`DonutChart`) foram atualizadas para uma nova paleta, garantindo maior
+      contraste e diferenciação entre as seções do gráfico:
         - `#fa2e59` (Vermelho intenso)
         - `#ff703f` (Laranja)
         - `#f7bc05` (Amarelo)
@@ -450,6 +465,7 @@ CSS - Sei fazer com autonomia -->
 
 - Desenvolvimento de aplicações backend robustas e escaláveis
 - Utilização de recursos da linguagem, como collections, threads, e exceptions
+
 </details>
 
 <details>
@@ -459,6 +475,7 @@ CSS - Sei fazer com autonomia -->
 - Injeção de dependências e gerenciamento de beans com Spring IoC Container
 - Gerenciamento de transações e configuração de segurança com Spring Security
 - Integração com bancos de dados usando Spring Data JPA
+
 </details>
 
 <details>
@@ -468,6 +485,7 @@ CSS - Sei fazer com autonomia -->
 - Flexbox e Grid Layout para criação de layouts avançados
 - Aplicação de animações e transições CSS
 - Customização de temas e estilos para componentes web
+
 </details>
 
 <details>
@@ -477,6 +495,7 @@ CSS - Sei fazer com autonomia -->
 - Gerenciamento de estado com Vuex
 - Manipulação de eventos e ciclo de vida dos componentes
 - Integração com APIs REST e manipulação de dados assíncronos
+
 </details>
 
 <details>
@@ -485,6 +504,7 @@ CSS - Sei fazer com autonomia -->
 - Criação e manipulação de tabelas, índices e relações
 - Escrita e otimização de consultas SQL complexas
 - Gerenciamento de transações e controle de concorrência
+
 </details>
 
 <details>
@@ -493,6 +513,7 @@ CSS - Sei fazer com autonomia -->
 - Gerenciamento de branches e fusão de código
 - Resolução de conflitos de código durante o merge
 - Uso de rebase para manter um histórico de commits limpo
+
 </details>
 
 <details>
@@ -500,6 +521,7 @@ CSS - Sei fazer com autonomia -->
 
 - Criação e gestão de repositórios
 - Revisão de código e pull requests
+
 </details>
 
 <details>
@@ -509,6 +531,7 @@ CSS - Sei fazer com autonomia -->
 - Debugging avançado e uso de breakpoints condicionais
 - Testes automatizados e integração com ferramentas de build como Maven ou Gradle
 - Configuração de plugins e temas para personalização do ambiente
+
 </details>
 
 <details>
@@ -518,6 +541,7 @@ CSS - Sei fazer com autonomia -->
 - Debugging e profilamento de código JavaScript
 - Suporte a frameworks modernos como Vue.js e React
 - Uso de ferramentas de build e task runners (Webpack, npm scripts)
+
 </details>
 
 <details>
@@ -526,8 +550,8 @@ CSS - Sei fazer com autonomia -->
 - Busca de soluções para problemas específicos de programação
 - Participação em discussões e compartilhamento de conhecimento
 - Adaptação de soluções existentes para contextos específicos do projeto
-</details>
 
+</details>
 
 #### Soft Skills
 
