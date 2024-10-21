@@ -1,1 +1,1 @@
-![strategy](src/main/resources/docs/strategy.png)
+![strategy](src/main/resources/docs/singleton.drawio.png)
