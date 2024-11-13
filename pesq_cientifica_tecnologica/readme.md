@@ -343,19 +343,6 @@ O método realiza as seguintes atualizações:
 ---
 
 <details>
-<summary>Aplicação de Estilo Escopado</summary>
-
-### 7. Estilo Escopado
-
-- **Estilo:** Escopado ao componente principal para garantir que as regras CSS sejam aplicadas apenas no contexto do
-  componente "Silver".
-
-</details>
-
-
----
-
-<details>
 <summary>Atualização do Alinhamento do Botão de Cadastro</summary>
 
 1. Ajuste de Estilo para o Botão de Cadastro
@@ -375,6 +362,9 @@ O método realiza as seguintes atualizações:
       alinhados na base inferior.
     - Direção dos itens dentro da checkBox definida como row e justificada para flex-start.
 
+- **Estilo:** Escopado ao componente principal para garantir que as regras CSS sejam aplicadas apenas no contexto do
+  componente "Silver".
+
 </details>
 
 ---
@@ -382,7 +372,7 @@ O método realiza as seguintes atualizações:
 <details>
 <summary>Criação do Componente DonutChart</summary>
 
-### 2. Criação do Componente DonutChart
+### 1. Criação do Componente DonutChart
 
 - **Nova Dependência:**
 - Adicionada a dependência `vue-chartjs` versão 5.3.1 ao projeto, permitindo a criação de gráficos no Vue 3.
@@ -401,29 +391,7 @@ O método realiza as seguintes atualizações:
     - Definidas as opções do gráfico (`chartOptions`), focadas em responsividade, manutenção da proporção e estilização
       das legendas e título.
 
-</details>
-
----
-
-<details>
-<summary>Exemplo de Uso do Componente DonutChart</summary>
-
-### 4. Exemplo de Uso
-
-- **Importação e Utilização:**
-    - O componente `DonutChart` foi importado e utilizado, com dados de exemplo para representar configurações por
-      empresa.
-    - Exemplo de dados (`chartData`) inclui etiquetas, valores e cores para as seções do gráfico, com um título
-      especificando "Configurações por empresa".
-
-</details>
-
----
-
-<details>
-<summary>Atualização das Cores e Margem Superior do Gráfico; Adição de Rota para Tela de Gráfico</summary>
-
-### 1. Modificação das Cores do Gráfico de Rosca
+### 2. Modificação das Cores do Gráfico de Rosca
 
 - **Alteração de Cores:**
     - As cores utilizadas no gráfico de rosca (`DonutChart`) foram atualizadas para uma nova paleta, garantindo maior
@@ -452,7 +420,6 @@ O método realiza as seguintes atualizações:
     - Direção dos itens dentro da checkBox definida como row e justificada para flex-start.
 
 </details>
-
 ---
 
 #### Hard Skills
@@ -471,7 +438,7 @@ CSS - Sei fazer com autonomia -->
 <details>
   <summary>Desenvolvimento com Spring Framework - Sei fazer com consulta</summary>
 
-- Criação de APIs RESTful
+- Criação de APIs REST
 - Injeção de dependências e gerenciamento de beans com Spring IoC Container
 - Gerenciamento de transações e configuração de segurança com Spring Security
 - Integração com bancos de dados usando Spring Data JPA
@@ -479,12 +446,12 @@ CSS - Sei fazer com autonomia -->
 </details>
 
 <details>
-  <summary>Estilização e Layout com CSS - Sei fazer com certa autonomia mas preciso de consulta</summary>
+  <summary>Estilização e Layout com CSS - Sei fazer com certa autonomia, mas preciso de consulta</summary>
 
 - Design responsivo usando media queries
 - Flexbox e Grid Layout para criação de layouts avançados
 - Aplicação de animações e transições CSS
-- Customização de temas e estilos para componentes web
+- Customização de temas e estilos para componente web
 
 </details>
 
